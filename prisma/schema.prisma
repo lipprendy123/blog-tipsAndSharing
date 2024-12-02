@@ -53,9 +53,10 @@ model Post {
 }
 
 model Category {
-   id           Int      @id @default(autoincrement())
-   name         String   @db.VarBit(255)
-   post         Post[]
-   created_at   DateTime @default(now())
-   updated_at   DateTime @updatedAt
+   id                    Int      @id @default(autoincrement())
+   name                  String   @db.VarBit(255)
+   category_images       String   @db.VarChar(255)
+   post                  Post[]
+   created_at            DateTime @default(now())
+   updated_at            DateTime @updatedAt
 }

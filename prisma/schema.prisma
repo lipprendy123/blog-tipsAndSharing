@@ -46,6 +46,7 @@ model Post {
   published   Boolean  @default(false)
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
+  authorName      String   @db.VarChar(255)
   authorId    Int
   author      User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
   categoryId  Int
